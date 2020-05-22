@@ -1,5 +1,6 @@
 *{
     background-color: #5CDB95;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
 body{
@@ -90,10 +91,10 @@ form{
 }
 
 .form-control{
-    width: 600px;
+    width: 70%;
     background: transparent;
     border: none;
-    outline: 5px solid #05386B;
+    outline: 2px solid #05386B;
     border-bottom: 1px solid #05386B;
     color: #05386B;
     font-size: 18px;
