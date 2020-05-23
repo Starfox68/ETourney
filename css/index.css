@@ -63,3 +63,15 @@
 .logo{
     position: absolute; bottom: 0px; right: 7px;
 }
+
+.go-to-gen-button{
+    width: 70%;
+    background: #05386B;
+    text-decoration: none;
+    border: none;
+    outline: 2px solid #05386B;
+    border-bottom: 1px solid #05386B;
+    color: rgb(255, 255, 255);
+    font-size: 18px;
+    margin-bottom: 16px;
+}
