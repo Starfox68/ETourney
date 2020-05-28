@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ETourney</title>
+    <link rel="stylesheet" href="/css/bracket.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script src="/js/generator.js"></script>
+</head>
+<body>
+
+
+<div class="topnav" id="myTopnav">
+    <a href="index.html">Home</a>
+    <a href="bracket.html" class="active">Bracket Generator</a>
+    <a href="contact.html">Contact</a>
+    <a href="javascript:void(0);" class="icon" onclick="myFunction()">
+        <i class="fa fa-bars"></i>
+    </a>
+</div>
+
+<div class="logo"><img src="/Images/Home/logo.png" alt="logo"></div>
+
+<h1>Tournament name:</h1>
+<br>
+<h1>&nbsp Tournament type:  Single Elimination</h1>
+<br>
+<h1>&nbsp &nbsp &nbsp &nbsp &nbsp &nbspParticipants:</h1>
+
+
+<form id="form" onsubmit="return false;">
+    <input type="text" id="tourneyName" />
+    <textarea name="participants" id="participants" cols="30" rows="10"></textarea>
+    <a href="bracketDisplay.html"><input type="submit" id=nameSubmit onclick="othername();" /></a>
+
+    <a href="bracketDisplay.html"><button >Submit Button</button></a>
+        
+</form>
+
+
+</body>
+</html>
