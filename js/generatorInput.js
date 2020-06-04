@@ -1,7 +1,32 @@
+//delets all cookies currently
+function deleteAllCookies(){
+
+    var cookies = document.cookie.split(";");
+
+    for (var i = 0; i < cookies.length; i++){
+        deleteCookie(cookies[i].split("=")[0]);
+    }
+}
+
+function setCookie(name, value, expirydays) {
+    var d = new Date();
+
+    d.setTime(d.getTime() + (expirydays*24*60*60*1000));
+
+    var expires = "expires="+ d.toUTCString();
+    
+    document.cookie = name + "=" + value + "; " + expires;
+}
+
+function deleteCookie(name){
+    setCookie(name,"",-1);
+}
+
 function sendCookie(){
 
     deleteAllCookies();
 
+    //array of placeholders for the names of the people
 
     var cookieNames = ["Name1", "Name2", "Name3", "Name4", "Name5", "Name6", "Name7", "Name8", "Name9", "Name10", "Name11", "Name12", "Name13", "Name14", "Name15", "Name16", "Name17", "Name18", "Name19", "Name20"];
 
@@ -27,48 +52,34 @@ function sendCookie(){
 }
 
 function readCookie(){
+
+    //split the cookies to display just the tournament name, number of people, and names of people
     var original = document.cookie;         
     var changed = original.split(";")      
     
-    var takeNumber = changed[1];
-    var fakeLength = takeNumber.split("=");
+     //length is the size of the array
+    var ogLength = changed[1];
+    var fakeLength = ogLength.split("=");
     var holderLength = parseInt(fakeLength[1], 10);
     var length = holderLength + 2;
-    //alert(length);
 
+    //getting name of tournament and names of people
     var fakenameofTourney = changed[0].split("=");
     var nameofTourney = fakenameofTourney[1];
 
     var fakePeopleParticipating = changed[1].split("=");
     var PeopleParticipating = parseInt(fakePeopleParticipating[1], 10);
 
+    //make standings with the first two elements as the name and number of people
     var standings = [nameofTourney, PeopleParticipating]
 
 
+    //make the rest of the array with the names of the participants
     for (i = 2; i < length; i++){
         var holder = changed[i].split("=");
         standings[i] = holder[1];
     }
 
-    //at this point: standings contains the name of the tournament, the number of people, and then the names of the people in order  
-
+    //show what's in the array
     document.getElementById("originalBracket").innerHTML = standings;
-}
-
-function deleteAllCookies(){
-    var cookies = document.cookie.split(";");
-    for (var i = 0; i < cookies.length; i++){
-        deleteCookie(cookies[i].split("=")[0]);
-    }
-}
-
-function setCookie(name, value, expirydays) {
-    var d = new Date();
-    d.setTime(d.getTime() + (expirydays*24*60*60*1000));
-    var expires = "expires="+ d.toUTCString();
-    document.cookie = name + "=" + value + "; " + expires;
-}
-
-function deleteCookie(name){
-    setCookie(name,"",-1);
 }

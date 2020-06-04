@@ -1,3 +1,4 @@
+/*overall colour scheme*/
 *{
     background-color: #5CDB95;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
@@ -64,6 +65,7 @@
     position: absolute; bottom: 0px; right: 6px;
 }
 
+/*button for going to generator*/
 .go-to-gen-button{
     width: 70%;
     background: #05386B;
