@@ -6,7 +6,7 @@
     <title>ETourney</title>
     <link rel="stylesheet" href="/css/bracket.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-    <script src="/js/generator.js"></script>
+    <script src="/js/generatorInput.js"></script>
 </head>
 <body>
 
@@ -32,10 +32,7 @@
 <form id="form" onsubmit="return false;">
     <input type="text" id="tourneyName" />
     <textarea name="participants" id="participants" cols="30" rows="10"></textarea>
-    <!--
-    <a href="bracketDisplay.html"><input type="submit" id=nameSubmit onclick="othername();" /></a>-->
-
-    <a href="bracketDisplay.html" onclick="othername();" id=nameSubmit>Lock in Participants</a>
+    <a href="bracketDisplay.html" onclick="sendCookie();" id=nameSubmit>Lock in Participants</a>
         
 </form>
 
